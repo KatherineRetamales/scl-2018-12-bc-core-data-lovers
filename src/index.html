@@ -1,62 +1,74 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-  <form action="index.html" method="post" id="form">
-    <!-- Cabecera -->
-    <header>
-    </header>
-    <nav id="menu">
-      <ul>
-        <li><a href="#">Roles</a>
-          <ul>
-            <li><button id="btn-todos">All</button></li>
-            <li><button id="btn-tank">Tank</button></li>
-            <li><button id="btn-fighter">Fighter</button></li>
-            <li><button id="btn-mage">Mage</button></li>
-            <li><button id="btn-assassin">Assasin</button></li>
-            <li><button id="btn-support">Support</button></li>
-            <li><button id="btn-marksman">Marskman</button></li>
-          </ul>
-        </li>
-        <li><a href="#">Ordenar</a>
-          <ul>
-            <li><button id="btn-asc">A-Z</button></li>
-            <li><button id="btn-desc">Z-A</button></li>
-          </ul>
-        </li>
-        <li id="searchbox"><input id="search" type="text" placeholder="Buscar por personaje">
-          <button id="btn-search">Buscar</button>
-        </li>
-      </ul>
-    </nav>
-    <!-- Contenido -->
-    <section>
-      <h1>Campeones</h1>
-      <div id="root"></div>
-      <!-- <script src="./data/injuries/injuries.js"></script> -->
-      <!-- <script src="./data/pokemon/pokemon.js"></script> -->
-      <!-- <script src="./data/steam/steam.js"></script> -->
-      <!-- <script src="./data/worldbank/worldbank.js"></script> -->
-      <script src="./data/lol/lol.js"></script>
-      <script src="data.js"></script>
-      <script src="main.js"></script>
-      <!-- The Modal -->
-      <div id="myModal" class="modal"> 
+  <nav class="w3-sidebar w3-bar-block w3-card" id="topnav">
+    <div id="btn-close">
+      <span onclick="closeSidebar()" class="w3-button w3-display-topright w3-large">X</span>
+    </div>
+    <ul class="accordion-menu">
+      <li>
+        <div class="dropdownlink"> Roles</div>
+        <ul class="submenuItems">
+          <li><button id="btn_tank">Tank</button></li>
+          <li><button id="btn_fighter">Fighter</button></li>
+          <li><button id="btn_mage">Mage</button></li>
+          <li><button id="btn_assassin">Assasin</button></li>
+          <li><button id="btn_support">Support</button></li>
+          <li><button id="btn_marksman">Marskman</button></li>
+        </ul>
+      </li>
+      <li>
+        <div class="dropdownlink">Ordenar</div>
+        <ul class="submenuItems">
+          <li><button id="btn_asc">A-Z</button></li>
+          <li><button id="btn_desc">Z-A</button></li>
+        </ul>
+      </li>
+      <li>
+        <div class="search">
+          <input id="search" type="text" placeholder="Busca campeon">
+          <button id="btn_search"><i class="fa fa-search"></i></button>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <header>
+    <div id="logo"></div>
+    <button id="sidebar" onclick="openSidebar()">&#9776;</button>
+  </header>
 
-        <!-- Modal content -->
+  <div id="root"></div>
+  <div id="modal" class="modal"><!-- Modal content --></div>
+  <!-- <script src="./data/injuries/injuries.js"></script> -->
+  <!-- <script src="./data/pokemon/pokemon.js"></script> -->
+  <!-- <script src="./data/steam/steam.js"></script> -->
+  <!-- <script src="./data/worldbank/worldbank.js"></script> -->
+  <script src="./data/lol/lol.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
 
+  <script src=index.js></script>
+  <script>
+    closeSidebar();
+    function openSidebar() {
+      document.getElementById("topnav").style.display = "block";
+    }
 
-      </div>
-    </section>
-  </form>
+    function closeSidebar() {
+      document.getElementById("topnav").style.display = "none";
+    }
+  </script>
 </body>
 
 </html>

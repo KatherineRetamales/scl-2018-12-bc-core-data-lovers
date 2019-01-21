@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "data-lovers",
   "version": "1.0.0",
   "main": "src/index.html",
@@ -25,31 +24,4 @@
     "verbose": true,
     "collectCoverage": true
   }
-=======
- "name": "data-lovers",
- "version": "1.0.0",
- "main": "src/index.html",
- "license": "MIT",
- "scripts": {
-   "htmlhint": "htmlhint src/.html test/.html",
-   "eslint": "eslint --ext .js src/",
-   "pretest": "npm run eslint && npm run htmlhint",
-   "test": "jest"
- },
- "dependencies": {
-   "eslint": "^5.9.0",
-   "eslint-plugin-jest": "^22.1.2",
-   "expect": "^23.6.0",
-   "htmlhint": "^0.10.1",
-   "jest": "^23.6.0"
- },
- "devDependencies": {
-   "chai": "^4.2.0",
-   "mocha": "^5.2.0"
- },
- "jest": {
-   "verbose": true,
-   "collectCoverage": true
- }
->>>>>>> 9d47590739d6d0c7d79301314e9d57a25e14240a
 }

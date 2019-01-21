@@ -1,126 +1,221 @@
-html,body {
-    width:100%;
-    background-color: #0a0a0c;
+body {
     margin: 0;
-    overflow : hidden;
-}
-header {
-    height: 256px;
-    display:block;
-    padding:0px;
-    background-image :url(https://www.online-betting.org/wp-content/uploads/2017/05/lol_header.png);
-    width: 71%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0a0a0c;
+  }
+  header{
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+   
+  }
+  header #logo{
+    background-image :url(img/header-bg.png);
+    width: 90%;
+    height: 150px;
     background-repeat: no-repeat;
-    margin:auto;
-    border: 1px solid #937341;
-    background-size: 95%;
-    background-position: center;
-}
-nav{
-    margin-top: 15px;
-    width: 68%;
-    height: 70px;
+    background-size: 100%; 
+    float: left;
+  }
+  .search{
+    float: left;
+    border-radius: 5px 5px 5px 5px;
+    background-color: #f1e6d0;
+    opacity: 0.5;
+  }
+  .search input, button{
+    background-color: transparent;
+    border: none;
+  }
+  #root{
+    top :150px;
+    max-width: 90%;
+    border: 3px solid #937341;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
-    display:block;
-    float: right;
-}
-#menu ul li {
-    background-color:#0a0a0c;
-}
-#menu ul {
-    list-style:none;
-    margin:0;
-    padding:0;
-}
-#menu ul a{
-    display:block;
-    color:#f1e6d0;
-    text-decoration:none;
-    font-weight:200px;
-    font-size:15px;
-    padding:10px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-}
-#menu ul li {
-    position:relative;
-    float: left;
-    margin:0;
-    padding:0;
-}
-#menu ul ul {
-    display:none;
-    position:absolute;
-    top:100%;
-    left:0;
-    padding:0;
-}
-#menu ul ul li {
-    float:none;
-    width:150px
-}
-#menu ul ul a {
-    line-height:120%;
-    padding:10px 15px;
-}
-#menu ul li:hover > ul {
-    display:block;
-}
-#searchbox
-{
-    background-color: #0a0a0c;
-    background-image: linear-gradient(#0a0a0c);
-    border-radius: 35px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #937341;
-    width: 250px;
-    height: 35px;
-    padding: 10px;
-    margin: 100px auto 50px;
-    overflow: hidden; /* Clear floats */
-}
-#search,
-#btn-search {
-    float: left;
-}
-#search {
-    padding: 5px 9px;
-    height: 23px;
-    width: 130px;
-    border: 1px solid #937341;
-    background: #f1e6d0;
-    border-radius: 50px 3px 3px 50px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25) inset, 0 1px 0 rgba(255, 255, 255, 1);
-}
-#btn-search
-{
-    background-color: #937341;
-    border-radius: 3px 50px 50px 3px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #937341;
-    height: 35px;
-    margin: 0 0 0 10px;
-    padding: 0;
-    width: 90px;
-    cursor: pointer;
+    
+  }
+  #root button img{
+    margin: 5px;
+    width: 60px;
+    height: 60px;
+    border: 3px solid #937341;
+    border-radius: 30px;
+    
+  }
+  #root p{
+    margin: 0px;
     color: #f1e6d0;
-}
+    border: 1px solid #937341;
+    background-color: #937341;
+    width: 100px;
+    height: 30px;
+  }
+  #sidebar{
+    float :right;
+    color: #f1e6d0;
+    background-color: transparent;
+    width: 70px;
+    height: 70px;
+    font-size: 50px;
+    outline: none;
+    border: 0;
+  }
+  #topnav{
+   width: 250px;
+   float: left;
+   background-color: #0a0a0c;
+   opacity: 0.9;
+   filter: alpha(opacity=90); /* For IE8 and earlier */
+  
+  }
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  h4{
+    padding: 10px;
+  }
+  .accordion-menu {
+    width: 100%;
+    max-width: 250px;
+  }
+  .accordion-menu li.open .dropdownlink {
+    color: #937341;
+  }
+  .dropdownlink {
+    cursor: pointer;
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    border-bottom: 2px solid #937341;
+    color: #f1e6d0;
+    position: relative;
+    transition: all 0.4s ease-out;
+  }
+  
+  .submenuItems {
+    display: none;
+    background: #937341;
+    opacity: 0.5;
+  }
+  
+  .submenuItems a {
+    display: block;
+    color: #f1e6d0;
+    padding: 12px 12px 12px 45px;
+    transition: all 0.4s ease-out;
+  }
+  #btn-close{
+    background-color: #0a0a0c;
+    color: #f1e6d0;
+  }
+  .modal {
+    background-color: #0a0a0c;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 3%; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 700px; /* Full height */
+  }
+  
+  /* Modal Content */
+  .modal_content {
+    background-color: #0a0a0c;
+    margin: auto;
+    padding: 10px;
+    border: 1px solid #937341;
+    width: 100%;
+    height: 600px;
+    color: #f1e6d0;
+  }
+  .info {
+    width:100%;
+    height:550px;
+    float: left;
+    padding: 20px;
+    background-color: rgba(64, 64, 64, 0.6);
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #f1e6d0;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  @media screen and (max-width: 699px) { 
+    header{
+      height: 190px;
+    }
+    header #logo{
+      background-image :url(img/lol.png.png);
+      width: 80%;
+      height: 190px;
+    }
+    #root{
+      top:190px;
+    }
+    #sidebar{
+      width: 50px;
+      height: 50px;
+      font-size: 40px;
+    }
+  }
+  @media screen and (max-width: 499px) { 
+    header{
+      height: 160px;
+    }
+    header #logo{
+      background-image :url(img/lol.png.png);
+      height: 160px;
+    }
+    #root{
+      top:160px;
+    }
+    #sidebar{
+      width: 40px;
+      height: 40px;
+      font-size: 25px;
+    }
+  }
+  @media screen and (max-width: 399px) { 
+    header{
+      height: 130px;
+    }
+    header #logo{
+      background-image :url(img/lol.png.png);
+      height: 130px;
+    }
+    #root{
+      top:130px;
+    }
+    #sidebar{
+      width: 30px;
+      height: 30px;
+      font-size: 15px;
+    }
+  }
+
 #tag {
   color: yellow;
   font-style: oblique;
   font-size: 17px;
-}
-section {
-    width: 68%;
-    height: 250px;
-    border: 1px solid #937341;
-    padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    overflow : auto;
 }
 /* width */
 ::-webkit-scrollbar {
@@ -143,246 +238,3 @@ section {
   ::-webkit-scrollbar-thumb:hover {
     background: #937341;
   }
-button{
-    width: 100px;
-    background-color: #0a0a0c;
-    color: #f1e6d0;
-    border: none;
-}
-button img{
-    height: 50px;
-    width: 50px;
-    /* los siguientes valores son independientes del tamaño del círculo */
-    background-repeat: no-repeat;
-    background-position: 50%;
-    border-radius: 50%;
-    background-size: 100% auto;
-    border: 1px solid #937341;
-}
-.modal {
-    background-color: #0a0a0c;
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 3%; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 90; /* Full height */
-  }
-
-  /* Modal Content */
-  .modal-content {
-    background-color: #0a0a0c;
-    margin: auto;
-    padding: 10px;
-    border: 1px solid #937341;
-    width: 80%;
-    height: 530px;
-    color: #f1e6d0;
-  }
-
-.info {
-  width:30%;
-  height:280px;
-  float: left;
-  margin-left: 8%;
-  padding: 20px;
-  border: solid 2px #937341;
-  background-color: rgba(64, 64, 64, 0.6);
-}
-
-.statistics{
-  width: 30%;
-  height: 280px;
-  float: left;
-  margin-left: 10%;
-  padding: 20px;
-  border: solid 2px #937341;
-  background-color: rgba(64, 64, 64, 0.6);
-}
-
-  /* The Close Button */
-  .close {
-    color: #f1e6d0;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    /* Styles */
-    }
-    /* Smartphones (landscape) ----------- */
-    @media only screen and (min-width : 321px) {
-    /* Styles */
-    }
-    /* Smartphones (portrait) ----------- */
-    @media only screen and (max-width : 320px) {
-    /* Styles */
-    }
-    /* iPads (landscape) ----------- */
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-        header {
-            height: 290px;
-            width: 100%;
-        }
-        section {
-            width: 90%;
-            height: 360px;
-        }
-        button img{
-            height: 70px;
-            width: 70px;
-        }
-    }
-
-    /* iPads (portrait) ----------- */
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-        header {
-            height: 220px;
-            width: 100%;
-        }
-        section {
-            width: 95%;
-            height: 670px;
-        }
-        button img{
-            height: 90px;
-            width: 90px;
-        }
-    }
-    /**********
-    iPad 3
-    **********/
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
-    /* Styles */
-    }
-    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-    /* Styles */
-    }
-    /* Desktops and laptops ----------- */
-    @media only screen  and (min-width : 1224px) {
-    /* Styles */
-    }
-    /* Large screens ----------- */
-    @media only screen  and (min-width : 1824px) {
-    /* Styles */
-    }
-
-    /* iPhone 4 ----------- */
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
-        header {
-            height: 70px;
-            width: 50%;
-        }
-        nav{
-            width: 100%;
-            float: left;
-        }
-        section {
-            width: 90%;
-            height: 150px;
-        }
-        button img{
-            height: 50px;
-            width: 50px;
-        }
-    }
-
-    /*::-webkit-meter-even-less-god-value {
-            background: red;
-
-        }
-
-    ::-webkit-meter-optimum-value {
-        background: green;
-
-    }
-
-    ::-webkit-meter-suboptimum-value {
-        background: yellow;
-
-    }*/
-
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-    /* Styles */
-    }
-
-    /* iPhone 5 ----------- */
-    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-    /* Styles */
-    }
-
-    @media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    /* Styles */
-    }
-
-    /* iPhone 6, 7, 8 ----------- */
-    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-    /* Styles */
-    }
-
-    @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    /* Styles */
-    }
-
-    /* iPhone 6+, 7+, 8+ ----------- */
-    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-    /* Styles */
-    }
-
-    @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    /* Styles */
-    }
-
-    /* iPhone X ----------- */
-    @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-    /* Styles */
-    }
-
-    @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-    /* Styles */
-    }
-
-    /* iPhone XS Max, XR ----------- */
-    @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-    /* Styles */
-    }
-
-    @media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-    /* Styles */
-    }
-
-    /* Samsung Galaxy S3 ----------- */
-    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
-    /* Styles */
-    }
-
-    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
-    /* Styles */
-    }
-
-    /* Samsung Galaxy S4 ----------- */
-    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-    /* Styles */
-    }
-
-    @media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-    /* Styles */
-    }
-
-    /* Samsung Galaxy S5 ----------- */
-    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
-    /* Styles */
-    }
-
-    @media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
-    /* Styles */
-    }
